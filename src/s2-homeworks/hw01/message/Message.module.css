@@ -1,0 +1,51 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.imageAndText {
+    display: flex;
+    align-items: flex-end;
+    flex-direction:row-reverse;
+
+
+}
+
+.imageAndText img {
+    width: 27px;
+    margin: 5px;
+}
+
+.text {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #0066CC;
+    color: #FFFFFF;
+
+}
+
+.text:after {
+
+}
+
+.name {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.messageText {
+    margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.time {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding-right: 5px;
+
+}
