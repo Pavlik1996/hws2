@@ -30,7 +30,9 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
+            <br/>
             <div className={s.text}>
+
                 {'Людей добавили: '}
                 <span id={'hw3-users-total'}>
                     {totalUsers}
@@ -58,7 +60,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                     className={s.button}
                     disabled={!name.trim()}
                 >
-                    add
+                    Add
                 </button>
             </div>
 
