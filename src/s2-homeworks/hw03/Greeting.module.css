@@ -82,16 +82,21 @@
 
 .text {
     color: #000000;
-    opacity: 50%;
-    font-weight: 500;
     font-size: 14px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
 }
 
 .greeting {
     color: #000000;
-    font-weight: 500;
     font-size: 14px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 500;
     line-height: 17px;
+    margin-top: 10px;
 
 
 }

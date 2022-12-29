@@ -31,7 +31,9 @@
 }
 
 .errorInput:focus {
+
 }
 
 .error {
+    color: red;
 }

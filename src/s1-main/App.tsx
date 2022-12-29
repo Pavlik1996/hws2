@@ -9,18 +9,13 @@ function App() {
     return (
         <div className={s.App}>
             <HW1/>
-            <hr/>
-            <hr/>
-            {/*раскомментировать по ходу выполнения*/}
+            <div className={s.hr}></div>
             <HW2/>
-            <hr/>
-            <br/>
-            <br/>
+            <div className={s.hr}></div>
             <HW3/>
-            <hr/>
-            <br/>
-            <br/>
+            <div className={s.hr}></div>
             <HW4/>
+            <div className={s.hr}></div>
 
             {/*при выполнении дз 5 и более - закомментировать здесь дз 1-4, так как они есть внутри дз 5*/}
             {/*<HW5/>*/}
