@@ -12,6 +12,7 @@ type PropsType = {
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
+    const activePage = s.active
     return (
         <>
             {/*затемнение справа от открытого меню*/}
@@ -32,6 +33,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                         to={PATH.PRE_JUNIOR}
                         onClick={handleClose}
                         // className={...} // делает студент
+                        className={activePage}
                     >
                         Pre-junior
                     </NavLink>
