@@ -37,7 +37,7 @@ function Clock() {
     const stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map(function (el) {
         return el < 10 ? "0" + el : el
     }).join(":") || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = [date.getDay(), date.getMonth()+1, date.getFullYear()].map(function (el) {
+    const stringDate = [date.getDate(), date.getMonth()+1, date.getFullYear()].map(function (el) {
         return el < 10 ? "0" + el : el
     }).join(".") || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
@@ -47,7 +47,6 @@ function Clock() {
 
     return (
         <div className={s.clock}>
-            <div>{date.getMonth()}</div>
             <div
                 id={'hw9-watch'}
                 className={s.watch}
