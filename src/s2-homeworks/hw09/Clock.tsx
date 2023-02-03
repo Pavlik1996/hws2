@@ -37,13 +37,13 @@ function Clock() {
     const stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map(function (el) {
         return el < 10 ? "0" + el : el
     }).join(":") || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = [date.getDate(), date.getMonth()+1, date.getFullYear()].map(function (el) {
+    const stringDate = [date.getDate(), date.getMonth() + 1, date.getFullYear()].map(function (el) {
         return el < 10 ? "0" + el : el
     }).join(".") || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay =  Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date) || <br/> // пишут студенты
-    const stringMonth = Intl.DateTimeFormat("en-US", { month: "long" }).format(date) || <br/> // пишут студенты
+    const stringDay = Intl.DateTimeFormat("en-US", {weekday: "long"}).format(date) || <br/> // пишут студенты
+    const stringMonth = Intl.DateTimeFormat("en-US", {month: "long"}).format(date) || <br/> // пишут студенты
 
     return (
         <div className={s.clock}>
@@ -63,8 +63,8 @@ function Clock() {
                 <div className={s.more}>
                     {show ? (
                         <>
-                            <span id={'hw9-month'}>{stringMonth}</span>,{' '}
-                            <span id={'hw9-date'}>{stringDate}</span>
+                            <span id={'hw9-month'}>{stringDate}</span>,{' '}
+                            <span id={'hw9-date'}>{stringMonth}</span>
                         </>
                     ) : (
                         <>
@@ -76,19 +76,19 @@ function Clock() {
 
             <div className={s.buttonsContainer}>
                 <SuperButton
+                    style={{width: '82px', fontFamily: 'Montserrat'}}
                     id={'hw9-button-start'}
-                    disabled={!!timerId} // пишут студенты // задизэйблить если таймер запущен
+                    disabled={!!timerId}
+                    // пишут студенты // задизэйблить если таймер запущен
                     onClick={start}
-                >
-                    start
-                </SuperButton>
+                >Start</SuperButton>
+
                 <SuperButton
+                    style={{width: '82px', fontFamily: 'Montserrat'}}
                     id={'hw9-button-stop'}
                     disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
-                >
-                    stop
-                </SuperButton>
+                >Stop</SuperButton>
             </div>
         </div>
     )
