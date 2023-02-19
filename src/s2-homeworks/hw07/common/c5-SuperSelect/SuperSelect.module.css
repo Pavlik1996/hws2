@@ -1,9 +1,17 @@
 .select {
+    width: 171px;
+    height: 36px;
+    border: 1px solid;
 }
 
 .select:focus {
+    border: none;
+
 }
 
 
 .option:hover {
+    border: none;
+
+
 }
