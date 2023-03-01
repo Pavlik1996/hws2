@@ -41,7 +41,7 @@ const HW13 = () => {
         setCode(`Код ${res.status}!`);
         setImage(success200);
         setText(res.data.errorText);
-        setInfo("");
+        setInfo(res.data.info);
         // дописать
       })
       .catch((e) => {
